@@ -49,6 +49,21 @@ h3{margin:0 0 .35rem;font-size:1.2rem;letter-spacing:-.01em}
 .tone-y{background:var(--y);color:var(--on)}.tone-p{background:var(--p);color:var(--on)}.tone-b{background:var(--b);color:var(--on)}.tone-g{background:var(--g);color:var(--on)}
 .big{font:700 2.8rem/1 'Space Grotesk';letter-spacing:-.03em}
 .tag{display:inline-block;border:2px solid #111;padding:1px 8px;font-size:.75rem;background:var(--y);color:#111;margin-bottom:.5rem}
+.case-link{display:block;color:inherit;text-decoration:none;min-height:100%}
+.case-link .mini-meta{margin-top:.8rem;font:.8rem/1.5 'Space Mono',monospace;opacity:.8}
+.case-study{max-width:760px}
+.eyebrow{font:700 .76rem 'Space Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);opacity:.75;margin:0 0 .8rem}
+.meta{font:700 .8rem 'Space Mono',monospace;opacity:.8;margin:0 0 1.5rem}
+.case-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:1.5rem 0}
+.metric-card{padding:1rem;border:2px solid var(--ink);background:var(--card);box-shadow:5px 5px 0 var(--ink)}
+.metric-card strong{display:block;font:700 clamp(1.7rem,4vw,2.5rem)/1 'Space Grotesk';letter-spacing:-.04em}
+.metric-card span{font:.72rem 'Space Mono',monospace;display:block;margin-top:.45rem;opacity:.8}
+.issue-card,.fix-card{border:2px solid var(--ink);padding:1rem;margin:0 0 1rem;background:var(--card);box-shadow:5px 5px 0 var(--ink)}
+.issue-card h3,.fix-card h3{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.issue-card .chip{display:inline-block;border:2px solid var(--ink);box-shadow:none;background:var(--y);color:var(--on);padding:4px 8px;margin:0}
+.pull{font:700 clamp(1.2rem,2vw,1.8rem)/1.35 'Space Grotesk',sans-serif;letter-spacing:-.02em;border-left:6px solid var(--p);padding:.6rem 0 .6rem 1rem;margin:1.8rem 0 2rem;max-width:42rem}
+.fix-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.5rem}
 .ph{width:min(100%,140px);aspect-ratio:1;border:2px dashed currentColor;display:flex;align-items:center;justify-content:center;font:700 .8rem 'Space Mono',monospace;margin-bottom:.75rem;overflow:hidden}
 .ph img{width:100%;height:100%;object-fit:cover}
 details{border:2px solid var(--ink);margin-bottom:.75rem;background:var(--card)}
