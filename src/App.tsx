@@ -5,18 +5,37 @@ import Home from './pages/Home'
 import { About, Contact, Info } from './pages/Pages'
 import { EMAIL, ROUTES } from './data'
 
+const THEME_STORAGE_KEY = 'aetheria-theme'
+
 const get = () => { const h = location.hash.slice(1); return ROUTES.some(r => r.id === h) ? h : 'home' }
+
+function getInitialTheme() {
+  try {
+    const saved = localStorage.getItem(THEME_STORAGE_KEY)
+    if (saved === 'dark' || saved === 'light') return saved === 'dark'
+  } catch (error) {
+    console.error('Unable to read the saved theme preference.', error)
+  }
+  return matchMedia('(prefers-color-scheme: dark)').matches
+}
+
 export default function App() {
   const [id, setId] = useState(get)
   const [pal, setPal] = useState(false)
-  const [dark, setDark] = useState(() => matchMedia('(prefers-color-scheme: dark)').matches)
+  const [dark, setDark] = useState(getInitialTheme)
   // Ease between themes instead of a hard brightness jump.
   const flip = useCallback(() => {
     const d = document.documentElement
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { d.classList.add('theming'); setTimeout(() => d.classList.remove('theming'), 450) }
     navigator.vibrate?.(8)
-    setDark(v => !v)
-  }, [])
+    const nextDark = !dark
+    setDark(nextDark)
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, nextDark ? 'dark' : 'light')
+    } catch (error) {
+      console.error('Unable to save the theme preference.', error)
+    }
+  }, [dark])
   useEffect(() => { document.documentElement.dataset.theme = dark ? 'dark' : 'light' }, [dark])
   useEffect(() => {
     const h = () => { setId(get()); scrollTo({ top: 0, behavior: 'instant' }) }
