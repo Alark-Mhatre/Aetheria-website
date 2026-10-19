@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kinetix Biomechanics &amp; Sports Physiotherapy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F5F0;--s1:#fff;--s2:#ECEAE2;--bd:#DCD9CE;--tx:#121413;--mu:#5A5E5B;--g:#163828;--cta:#D84A32;--ok:#1F7A4C;--glass:rgba(246,245,240,.72);--r:22px;--ease:cubic-bezier(.32,.72,0,1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#121413;--s1:#1b1e1c;--s2:#242825;--bd:#343936;--tx:#F6F5F0;--mu:#a3a8a4;--g:#7fd1a4;--ok:#5fd596;--glass:rgba(18,20,19,.72);color-scheme:dark}}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--tx);font:400 16px/1.55 'Plus Jakarta Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Instrument Serif','Newsreader',Georgia,serif;font-weight:400;letter-spacing:-.02em;line-height:1.04}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+:focus-visible{outline:2px solid var(--cta);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:96px 0;position:relative}
+.eyebrow{font:600 12px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--ok);margin-bottom:14px}
+h2{font-size:clamp(36px,5vw,60px);margin-bottom:14px}.lead{color:var(--mu);max-width:560px;font-size:18px}
+/* header */
+header{position:sticky;top:0;z-index:30;background:var(--glass);backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);border-bottom:1px solid var(--bd)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font:400 26px 'Instrument Serif',serif;letter-spacing:-.02em;color:var(--g);display:flex;gap:8px;align-items:center;text-decoration:none}
+.logo i{width:10px;height:10px;border-radius:50%;background:var(--cta);display:block;animation:pulse 2.4s infinite}
+nav{display:flex;gap:26px;align-items:center}nav a{color:var(--mu);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}nav a:hover{color:var(--tx)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .2s}
+.btn:active{transform:scale(.96)}.btn.p{background:var(--cta);color:#fff;box-shadow:0 8px 24px -8px rgba(216,74,50,.6)}.btn.p:hover{transform:translateY(-2px);box-shadow:0 14px 28px -8px rgba(216,74,50,.65)}
+.btn.s{background:var(--s1);border:1px solid var(--bd)}.btn.s:hover{background:var(--s2)}.btn.sm{padding:9px 18px;font-size:14px}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(216,74,50,0)}0%{box-shadow:0 0 0 0 rgba(216,74,50,.5)}}
+/* hero */
+.hero{padding:72px 0 88px}.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+h1{font-size:clamp(46px,7vw,92px);margin:18px 0 22px}h1 em{color:var(--g);font-style:italic}
+.pill{display:inline-flex;gap:9px;align-items:center;padding:8px 16px;border-radius:999px;background:var(--s1);border:1px solid var(--bd);font-size:13px;font-weight:600}
+.pill b{width:8px;height:8px;border-radius:50%;background:var(--ok);animation:pulse 2s infinite}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0}
+.trust{display:flex;gap:12px;flex-wrap:wrap}.trust div{padding:12px 16px;border-radius:16px;background:var(--s2);border:1px solid var(--bd);font-size:13px;color:var(--mu)}.trust strong{color:var(--tx);display:block;font-size:14px}
+.card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);box-shadow:0 1px 0 rgba(0,0,0,.02),0 24px 48px -28px rgba(18,20,19,.25)}
+.seg{display:flex;background:var(--s2);border-radius:14px;padding:4px;gap:2px;position:relative;flex-wrap:wrap}
+.seg button{flex:1;padding:9px 12px;border-radius:11px;font-size:13px;font-weight:600;color:var(--mu);transition:all .3s var(--ease);min-width:max-content}
+.seg button[aria-pressed=true],.seg button[aria-selected=true]{background:var(--s1);color:var(--tx);box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.prev{padding:26px}.rings{display:flex;gap:22px;align-items:center;margin:22px 0}
+.rings svg{width:168px;height:168px;flex:none;transform:rotate(-90deg)}.rings circle{fill:none;stroke-linecap:round;stroke-width:11;transition:stroke-dashoffset 1.2s var(--ease)}
+.rings .tr{stroke:var(--s2)}.leg div{display:flex;justify-content:space-between;gap:18px;padding:7px 0;border-bottom:1px solid var(--bd);font-size:13px}.leg div:last-child{border:0}.leg b{font-family:'JetBrains Mono',monospace}
+.rts{display:flex;justify-content:space-between;align-items:end;padding-top:6px}.rts .big{font:400 54px/1 'Instrument Serif',serif;color:var(--g)}
+.tl{height:6px;background:var(--s2);border-radius:9px;margin:12px 0 6px;overflow:hidden}.tl i{display:block;height:100%;background:var(--ok);border-radius:9px;width:0;transition:width 1.2s var(--ease)}
+.note{font-size:12px;color:var(--mu)}
+/* estimator */
+.est{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;margin-top:44px;align-items:start}
+.step{padding:26px;margin-bottom:18px}.step h3{font-size:26px;margin-bottom:4px}.step .n{font:600 12px 'JetBrains Mono',monospace;color:var(--cta)}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin-top:16px}
+.opt{text-align:left;padding:16px;border-radius:16px;border:1px solid var(--bd);background:var(--bg);transition:all .35s var(--ease)}
+.opt:hover{transform:translateY(-2px)}.opt[aria-pressed=true]{border-color:var(--g);background:var(--g);color:#F6F5F0;transform:scale(1.02)}
+.opt[aria-pressed=true] small{color:#cfe3d6}.opt b{display:block;font-size:15px}.opt small{color:var(--mu);font-size:12px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.row2 label{font-size:12px;color:var(--mu);display:block;margin-bottom:6px;font-weight:600}
+.out{position:sticky;top:84px;padding:28px;background:var(--g);color:#F6F5F0;border-color:var(--g)}
+.out h3{font-size:34px;margin:6px 0 10px}.out .mod{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}.out .mod span{padding:5px 11px;border-radius:99px;background:rgba(246,245,240,.12);font-size:12px}
+.out .k{font:600 11px 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;opacity:.65}
+.out .dur{font:400 40px/1.1 'JetBrains Mono',monospace;margin:4px 0 16px}.out .dur small{font-size:14px;opacity:.7}
+.bd{border-top:1px solid rgba(246,245,240,.2);padding-top:12px;margin-bottom:18px}.bd div{display:flex;justify-content:space-between;padding:5px 0;font:400 14px 'JetBrains Mono',monospace}
+.bd .sv{color:#9be3b8}.bd .tot{font-size:22px;font-weight:600;border-top:1px solid rgba(246,245,240,.2);margin-top:6px;padding-top:12px}
+.out .btn{width:100%}
+/* outcomes */
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-top:30px}
+.case{padding:24px;animation:in .5s var(--ease) both}@keyframes in{from{opacity:0;transform:translateY(14px) scale(.98)}}
+.case h3{font-size:26px}.case .tag{font-size:12px;color:var(--mu);margin-bottom:12px}
+.badge{display:inline-block;padding:8px 12px;border-radius:12px;background:rgba(31,122,76,.12);color:var(--ok);font:600 13px 'JetBrains Mono',monospace;margin:6px 0 10px}
+.case .cmp{font-size:14px;color:var(--mu)}.tg{margin-top:14px;font-weight:600;font-size:14px;color:var(--g)}
+.more{max-height:0;overflow:hidden;transition:max-height .5s var(--ease);font-size:14px;color:var(--mu)}.more p{padding-top:12px}
+/* footer */
+footer{background:var(--g);color:#F6F5F0;padding:64px 0 120px}footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}footer a{color:#cfe3d6}footer p{opacity:.85;font-size:14px}footer h3{font-size:34px;margin-bottom:10px}
+/* drawer */
+.bk{position:fixed;inset:0;background:rgba(18,20,19,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:all .45s var(--ease);z-index:60}
+.dr{position:fixed;top:0;right:0;bottom:0;width:min(520px,100%);background:var(--bg);z-index:61;transform:translateX(104%);transition:transform .55s var(--ease);overflow-y:auto;padding:26px 26px calc(40px + env(safe-area-inset-bottom,0px));visibility:hidden;box-shadow:-30px 0 60px -30px rgba(0,0,0,.35)}
+body.open .bk{opacity:1;visibility:visible}body.open .dr{transform:none;visibility:visible}body.open{overflow:hidden}
+.dr h2{font-size:38px;margin:0 0 4px}.dh{display:flex;justify-content:space-between;align-items:start}.x{width:38px;height:38px;border-radius:50%;background:var(--s2);font-size:18px}
+.blk{margin-top:22px}.blk>label,.lb{font:600 11px 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);display:block;margin-bottom:9px}
+.sum{padding:16px;border-radius:18px;background:var(--g);color:#F6F5F0}.sum .t{font:400 24px 'Instrument Serif',serif}.sum .m{font:400 13px 'JetBrains Mono',monospace;opacity:.8;margin-top:4px}
+select,input{width:100%;padding:13px 15px;border-radius:14px;border:1px solid var(--bd);background:var(--s1);color:var(--tx);font:inherit;transition:border .2s,box-shadow .2s}
+input:focus,select:focus{outline:0;border-color:var(--g);box-shadow:0 0 0 4px rgba(22,56,40,.15)}input.bad{border-color:var(--cta)}.er{color:var(--cta);font-size:12px;min-height:16px;margin-top:3px}
+.docs{display:grid;gap:8px}.doc{display:flex;gap:14px;align-items:center;text-align:left;padding:13px;border-radius:16px;background:var(--s1);border:1px solid var(--bd);transition:all .3s var(--ease)}
+.doc[aria-pressed=true]{border-color:var(--g);box-shadow:0 0 0 2px var(--g)}.av{width:46px;height:46px;border-radius:50%;background:var(--g);color:#F6F5F0;display:grid;place-items:center;font:400 18px 'Instrument Serif',serif;flex:none}
+.doc b{display:block;font-size:15px}.doc small{color:var(--mu);font-size:12px}
+.days,.slots{display:flex;gap:8px;flex-wrap:wrap}.chip{padding:10px 14px;border-radius:14px;border:1px solid var(--bd);background:var(--s1);font:600 13px 'JetBrains Mono',monospace;transition:all .3s var(--ease)}
+.chip[aria-pressed=true]{background:var(--cta);color:#fff;border-color:var(--cta);transform:scale(1.05)}.chip small{display:block;font:500 10px 'Plus Jakarta Sans';opacity:.7}
+.fl{display:grid;gap:10px}.conf{text-align:center;padding-top:20px}.ck{width:84px;height:84px;margin:0 auto 18px;border-radius:50%;background:var(--ok);display:grid;place-items:center}
+.ck path{stroke:#fff;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60;animation:dr .7s .2s var(--ease) forwards}@keyframes dr{to{stroke-dashoffset:0}}
+.ref{font:600 28px 'JetBrains Mono',monospace;letter-spacing:.08em;margin:10px 0 18px;color:var(--g)}.mapc{display:grid;grid-template-columns:90px 1fr;gap:14px;text-align:left;padding:14px;margin:18px 0}.mapc svg{width:90px;height:90px;border-radius:14px}
+.hid{display:none!important}
+/* mobile bar + xray */
+.mb{display:none}.xr{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;padding:11px 18px;border-radius:999px;background:#121413;color:#F6F5F0;font:600 12px 'JetBrains Mono',monospace;box-shadow:0 10px 30px rgba(0,0,0,.35);border:1px solid #444;transition:all .3s var(--ease)}
+.xr[aria-pressed=true]{background:#E9A91C;color:#121413;border-color:#E9A91C}
+[data-fix]{position:relative}
+body.xray [data-fix]{outline:2px dashed #E9A91C;outline-offset:6px;border-radius:var(--r)}
+body.xray [data-fix]::before{content:attr(data-fix);position:absolute;z-index:20;top:-14px;left:12px;max-width:min(430px,86%);background:#121413;color:#9be3b8;border:1px solid #1F7A4C;border-left:4px solid #E9A91C;padding:9px 13px;border-radius:10px;font:500 11px/1.45 'JetBrains Mono',monospace;box-shadow:0 12px 30px rgba(0,0,0,.35);animation:in .4s var(--ease)}
+@media(max-width:900px){.hero .wrap,.est,footer .wrap{grid-template-columns:1fr}.out{position:static}nav a{display:none}section{padding:64px 0}}
+@media(max-width:768px){.mb{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40;gap:8px;padding:8px;border-radius:26px;background:var(--glass);backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);border:1px solid var(--bd);box-shadow:0 14px 40px -10px rgba(0,0,0,.3)}.mb .btn{flex:1}.xr{bottom:calc(86px + env(safe-area-inset-bottom,0px))}.rings{flex-direction:column;align-items:flex-start}.row2{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}}
+</style></head><body>
+<header><div class="wrap"><a class="logo" href="#top"><i></i>Kinetix</a>
+<nav><a href="#estimator">Protocol Builder</a><a href="#outcomes">Outcomes</a><a href="#visit">Visit</a><button class="btn p sm" data-book>Book a slot</button></nav></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<div data-fix="UX FIX #1 — Value prop + dual CTA above the fold. Replaced a generic “Welcome to our clinic” banner: the visitor’s core fear (surgery, guesswork) is named in 6 words, and both CTAs are reachable in one tap.">
+<span class="pill"><b></b><span class="mono" id="status">Clinic Open • Next diagnostic slot: Tomorrow, 10:30 AM</span></span>
+<h1>Get back to peak load <em>without surgery or guesswork.</em></h1>
+<p class="lead">Force-plate diagnostics, hands-on manual therapy and progressive loading, run by sports physiotherapists who measure every degree of your recovery.</p>
+<div class="ctas"><button class="btn p" id="goCalc">Build Your Recovery Protocol (45s)</button><button class="btn s" data-book>Open Instant Booking Drawer</button></div>
+<div class="trust" data-fix="UX FIX #2 — Trust signals surfaced as live data, not buried in the footer. Rating, direct billing and slot availability answer the three objections before the scroll.">
+<div><strong class="mono">4.9 ★</strong>across 342 athlete &amp; patient reviews</div><div><strong>Direct Billing</strong>Insurance &amp; HSA accepted</div><div><strong class="mono">48 hrs</strong>median wait to first assessment</div></div>
+</div>
+<div class="card prev" data-fix="UX FIX #3 — Proof before pitch. Three real recovery arcs shown as animated range-of-motion rings: visitors self-identify with an injury in one click.">
+<div class="lb">Biomechanical Recovery Preview</div>
+<div class="seg" id="arcTabs" role="tablist"></div>
+<div class="rings"><svg viewBox="0 0 168 168" id="ringSvg" aria-hidden="true"></svg><div class="leg" id="leg" style="flex:1;width:100%"></div></div>
+<div class="rts"><div><div class="lb" style="margin:0">Avg. return to sport</div><div class="big" id="rts"></div></div><div class="note mono" id="arcN" style="text-align:right"></div></div>
+<div class="tl"><i id="tlb"></i></div><div class="note" id="arcO"></div></div>
+</div></section>
+
+<section id="estimator" style="background:var(--s2);border-block:1px solid var(--bd)"><div class="wrap">
+<div class="eyebrow">Recovery Protocol Builder</div><h2>Your plan, priced, in 3 taps.</h2><p class="lead">No “contact us for a quote.” Pick your situation and see sessions, timeline and out-of-pocket cost update instantly.</p>
+<div class="est"><div data-fix="UX FIX #4 — Replaced the static 8-field contact form with a stateful cost estimator. Interaction cost drops from 3 page loads to 4 clicks, and pricing is no longer hidden.">
+<div class="card step"><span class="n">STEP 01</span><h3>What are we fixing?</h3><div class="opts" id="o1"></div></div>
+<div class="card step"><span class="n">STEP 02</span><h3>How is it affecting you?</h3><div class="seg" id="o2" style="margin-top:16px"></div></div>
+<div class="card step"><span class="n">STEP 03</span><h3>Coverage &amp; pace</h3><div class="row2"><div><label>Payment</label><div class="seg" id="o3"></div></div><div><label>Frequency</label><div class="seg" id="o4"></div></div></div></div></div>
+<aside class="card out" aria-live="polite" data-fix="UX FIX #5 — Live output panel: every click re-renders protocol, duration and price. CTA hands the full plan to the booking drawer, so the patient never re-enters anything.">
+<div class="k">Recommended protocol</div><h3 id="pn"></h3><div class="mod" id="pm"></div>
+<div class="k">Estimated duration</div><div class="dur" id="pd"></div>
+<div class="bd" id="pb"></div><button class="btn p" id="lock">Lock In This Protocol &amp; Pick Time Slot →</button></aside></div>
+</div></section>
+
+<section id="outcomes"><div class="wrap">
+<div class="eyebrow">Measured outcomes</div><h2>Six weeks. Real numbers.</h2><p class="lead">Every figure below is taken from goniometer, dynamometer and force-plate readings at intake and at week six.</p>
+<div class="seg" id="ft" style="margin-top:28px;display:inline-flex" data-fix="UX FIX #6 — Testimonials filtered by patient type. A desk worker sees desk-worker results, not a marathoner’s, so social proof actually applies to them."></div>
+<div class="cases" id="cases"></div></div></section>
+</main>
+
+<footer id="visit"><div class="wrap"><div><h3>Kinetix</h3><p>Biomechanics &amp; Sports Physiotherapy<br>Level 2, The Foundry, 48 Harbour Row</p></div>
+<div><p><strong>Hours</strong><br>Mon–Fri 7:00–20:00<br>Sat 8:00–14:00</p></div><div><p><strong>Reach us</strong><br><a href="tel:+15550142210">+1 (555) 014-2210</a><br><a href="mailto:care@kinetix.example">care@kinetix.example</a></p></div></div></footer>
+
+<div class="mb"><button class="btn s" id="mEst">Estimate Cost</button><button class="btn p" data-book>Book Slot</button></div>
+<button class="xr" id="xr" aria-pressed="false">✦ Agency Audit X-Ray: OFF</button>
+
+<div class="bk" id="bk"></div>
+<aside class="dr" id="dr" role="dialog" aria-modal="true" aria-label="Booking drawer">
+<div id="form">
+<div class="dh"><div><div class="eyebrow" style="margin:0 0 6px">Instant booking</div><h2>Choose your time.</h2></div><button class="x" id="cl" aria-label="Close">✕</button></div>
+<div class="blk"><label>Synced protocol</label><div class="sum"><div class="t" id="dT"></div><div class="m" id="dM"></div></div><select id="dSel" style="margin-top:10px" aria-label="Change protocol"></select></div>
+<div class="blk"><label>Specialist</label><div class="docs" id="docs"></div></div>
+<div class="blk"><label>Day</label><div class="days" id="days"></div></div>
+<div class="blk"><label>Time</label><div class="slots" id="slots"></div><div class="er" id="eS"></div></div>
+<div class="blk fl"><div><input id="nm" placeholder="Full name" autocomplete="name"><div class="er" id="eN"></div></div><div><input id="ph" placeholder="Phone / WhatsApp" inputmode="tel" autocomplete="tel"><div class="er" id="eP"></div></div><div><input id="em" placeholder="Email" type="email" autocomplete="email"><div class="er" id="eE"></div></div>
+<button class="btn p" id="go">Confirm Booking</button><p class="note" style="text-align:center">No payment today. Free cancellation up to 12 hours before.</p></div></div>
+<div id="done" class="conf hid"><div class="ck"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M10 21l7 7 13-15"/></svg></div><h2>You’re booked.</h2><p class="lead" style="margin:0 auto" id="dMsg"></p><div class="ref" id="ref"></div>
+<div class="card mapc"><svg viewBox="0 0 90 90"><rect width="90" height="90" fill="#ECEAE2"/><path d="M0 60L90 30M30 0l20 90M0 20h90" stroke="#DCD9CE" stroke-width="6"/><circle cx="48" cy="42" r="9" fill="#D84A32"/><circle cx="48" cy="42" r="3.5" fill="#fff"/></svg><div style="font-size:14px"><b>Kinetix Clinic</b><br>Level 2, The Foundry, 48 Harbour Row<br><span class="note">Bring loose clothing and trainers.</span></div></div>
+<div style="display:grid;gap:10px"><button class="btn p" id="ics">Download .ICS Calendar Invite</button><button class="btn s" id="rst">Reset Demo</button></div></div>
+</aside>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const mk=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!==undefined)e.innerHTML=h;return e};
+const $$$=n=>"$"+Math.round(n).toLocaleString("en-US");
+/* ---------- data ---------- */
+const ARCS=[
+{k:"ACL & Knee Stability",r:[["Knee flexion ROM",97],["Quad strength (LSI)",93],["Single-leg stability",96]],rts:"26 wks",pct:78,n:"n = 118 patients",o:"Return-to-sport clearance after hop-test battery ≥ 90% limb symmetry."},
+{k:"Cervical / Postural Decompression",r:[["Cervical rotation",94],["Deep neck flexor endurance",88],["Postural load tolerance",91]],rts:"5 wks",pct:42,n:"n = 204 patients",o:"Median headache-free days rose from 3 to 26 per month by week six."},
+{k:"Rotator Cuff & Overhead Load",r:[["Overhead elevation",95],["External rotation strength",90],["Scapular control",92]],rts:"14 wks",pct:60,n:"n = 91 patients",o:"Overhead athletes cleared for full throwing or swim volume with no night pain."}];
+const ISS=[
+{id:"knee",n:"Knee / ACL / Meniscus",d:"Ligament, cartilage, patellar pain",p:"ACL & Knee Restoration Protocol",m:["Force-Plate Diagnostics","Dry Needling","Progressive Load Therapy"],s:8,rate:140},
+{id:"back",n:"Lower Back & Sciatica",d:"Disc, nerve, stiffness",p:"Spine Decompression & Control Protocol",m:["Movement Screen","Manual Therapy","Motor Control Retraining"],s:6,rate:125},
+{id:"sho",n:"Shoulder & Rotator Cuff",d:"Impingement, tears, instability",p:"Overhead Load Rebuild Protocol",m:["Isokinetic Strength Testing","Scapular Mobilisation","Progressive Load Therapy"],s:7,rate:135},
+{id:"post",n:"Post-Op Orthopedic Rehab",d:"Reconstruction, replacement, repair",p:"Post-Surgical Staged Recovery Protocol",m:["Surgeon-Aligned Staging","Edema & ROM Management","Graded Strength Return"],s:12,rate:150},
+{id:"mar",n:"Marathon / Full-Body Audit",d:"Gait, load, injury prevention",p:"Full-Body Biomechanics Audit",m:["3D Gait Analysis","Force-Plate Asymmetry Map","Custom Strength Block"],s:4,rate:160}];
+const STG=[["Acute (<2 wks)",0],["Chronic (1–6 mos)",2],["Performance / Prevention",-2]];
+const DOCS=[{n:"Dr. Anika Rao",c:"DPT, OCS · 12 yrs",t:["Knee","Post-Op","ACL"],i:"AR",off:0},{n:"Dr. Marcus Hale",c:"DPT, SCS · 9 yrs",t:["Runners","Gait","Spine"],i:"MH",off:1},{n:"Dr. Priya Nair",c:"PT, MSc · 14 yrs",t:["Shoulder","Neck","Desk Rehab"],i:"PN",off:2}];
+const CASES=[
+{g:"run",p:"Vikram S., 34 — Half-Marathoner",c:"Patellofemoral pain",b:"Pain: 8/10 → 0/10 | Squat Depth: +28°",t:"Peak knee load during descent exceeded his left side by 31%. Cadence rework plus 3 weeks of eccentric quad loading. Ran 21 km pain-free in week 11."},
+{g:"run",p:"Sana K., 27 — Trail Runner",c:"Recurrent ankle sprain",b:"Balance: 12s → 45s | Hop Symmetry: 96%",t:"Peroneal strength deficit of 22% found on dynamometry. Proprioceptive progressions plus plyometric re-entry. No re-sprain in 9 months."},
+{g:"desk",p:"Arjun M., 41 — Software Lead",c:"Sciatica after long sitting",b:"Pain: 7/10 → 1/10 | Sit Tolerance: 40m → 3h",t:"Directional preference found at the first visit. Hip hinge retraining, a workstation audit and graded nerve glides. Zero flare-ups at 6 weeks."},
+{g:"desk",p:"Meera D., 38 — Designer",c:"Cervicogenic headaches",b:"Headache days: 22 → 3 per month | Rotation: +24°",t:"Deep neck flexor endurance was 11s against a 38s norm. Thoracic mobility work plus a 4-minute daily activation routine."},
+{g:"post",p:"Rahul T., 29 — Footballer",c:"ACL reconstruction, week 2",b:"Extension: −8° → 0° | Quad LSI: 41% → 78%",t:"Staged to the surgeon’s protocol with early effusion control. Isokinetic testing at week 6 cleared progression to jogging."},
+{g:"post",p:"Kavita P., 56 — Teacher",c:"Rotator cuff repair, week 3",b:"Elevation: 70° → 158° | Night pain: gone",t:"Passive-to-active staging with scapular control first. Gym-free home programme kept her on schedule through term time."}];
+/* ---------- state ---------- */
+const S={i:0,s:1,pay:0,pace:1,doc:0,day:0,slot:null};
+/* ---------- hero rings ---------- */
+const COL=["#1F7A4C","#D84A32","#163828"],RAD=[72,57,42];let arcI=0;
+const at=$("#arcTabs");ARCS.forEach((a,i)=>{const b=mk("button","",a.k.split(" ")[0]==="Cervical"?"Cervical":a.k.split(" ")[0]==="Rotator"?"Rotator Cuff":"ACL & Knee");b.setAttribute("role","tab");b.onclick=()=>drawArc(i);at.append(b)});
+$("#ringSvg").innerHTML=RAD.map((r,i)=>{const c=2*Math.PI*r;return `<circle class="tr" cx="84" cy="84" r="${r}"/><circle class="v" cx="84" cy="84" r="${r}" stroke="${COL[i]}" stroke-dasharray="${c}" stroke-dashoffset="${c}"/>`}).join("");
+function drawArc(i){arcI=i;const a=ARCS[i];[...at.children].forEach((b,j)=>b.setAttribute("aria-selected",j===i));
+$$("#ringSvg .v").forEach((c,j)=>{const r=RAD[j],C=2*Math.PI*r;c.style.strokeDashoffset=C*(1-a.r[j][1]/100)});
+$("#leg").innerHTML=a.r.map((x,j)=>`<div><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${COL[j]};margin-right:8px"></i>${x[0]}</span><b>${x[1]}%</b></div>`).join("");
+$("#rts").textContent=a.rts;$("#arcN").textContent=a.n;$("#arcO").textContent=a.o;$("#tlb").style.width="0";requestAnimationFrame(()=>requestAnimationFrame(()=>$("#tlb").style.width=a.pct+"%"))}
+/* ---------- estimator ---------- */
+const o1=$("#o1");ISS.forEach((x,i)=>{const b=mk("button","opt",`<b>${x.n}</b><small>${x.d}</small>`);b.onclick=()=>{S.i=i;calc()};o1.append(b)});
+function seg(id,labels,key,off=0){const e=$(id);labels.forEach((l,i)=>{const b=mk("button","",l);b.onclick=()=>{S[key]=i+off;calc()};e.append(b)})}
+seg("#o2",STG.map(x=>x[0]),"s");seg("#o3",["Out-of-Pocket","Insurance / HSA"],"pay");seg("#o4",["Standard (1×/wk)","Accelerated (2×/wk)"],"pace");
+S.s=0;
+function plan(){const x=ISS[S.i],n=Math.max(3,x.s+STG[S.s][1]),wk=Math.ceil(n/(S.pace?2:1)),gross=n*x.rate,disc=gross*.15,bun=gross-disc,ins=S.pay?bun*.6:0;return{x,n,wk,gross,disc,bun,ins,out:bun-ins}}
+function calc(){const P=plan();
+$$("#o1 .opt").forEach((b,i)=>b.setAttribute("aria-pressed",i===S.i));
+[["#o2",S.s],["#o3",S.pay],["#o4",S.pace]].forEach(([id,v])=>[...$(id).children].forEach((b,i)=>b.setAttribute("aria-pressed",i===v)));
+$("#pn").textContent=P.x.p;$("#pm").innerHTML=P.x.m.map(m=>`<span>${m}</span>`).join("");
+$("#pd").innerHTML=`${P.n} <small>sessions over</small> ${P.wk} <small>wk${P.wk>1?"s":""}</small>`;
+$("#pb").innerHTML=`<div><span>${P.n} × ${$$$(P.x.rate)}</span><span>${$$$(P.gross)}</span></div><div class="sv"><span>Bundle saving (15%)</span><span>−${$$$(P.disc)}</span></div>`+(S.pay?`<div class="sv"><span>Est. reimbursement (60%)</span><span>−${$$$(P.ins)}</span></div>`:"")+`<div class="tot"><span>Est. you pay</span><span>${$$$(P.out)}</span></div>`;
+syncDrawer()}
+/* ---------- outcomes ---------- */
+const F=[["all","All Outcomes"],["run","Runners & Athletes"],["desk","Desk & Spine Rehab"],["post","Post-Surgery"]];let fil="all";
+const ft=$("#ft");F.forEach(([k,l])=>{const b=mk("button","",l);b.onclick=()=>{fil=k;cases()};ft.append(b)});
+function cases(){[...ft.children].forEach((b,i)=>b.setAttribute("aria-selected",F[i][0]===fil));const w=$("#cases");w.innerHTML="";
+CASES.filter(c=>fil==="all"||c.g===fil).forEach((c,i)=>{const e=mk("article","card case",`<h3>${c.p}</h3><div class="tag">${c.c}</div><div class="badge">${c.b}</div><button class="tg" aria-expanded="false">Read Clinical Breakdown ↓</button><div class="more"><p>${c.t}</p></div>`);e.style.animationDelay=i*60+"ms";
+const t=e.querySelector(".tg"),m=e.querySelector(".more");t.onclick=()=>{const o=t.getAttribute("aria-expanded")!=="true";t.setAttribute("aria-expanded",o);t.textContent=o?"Hide Clinical Breakdown ↑":"Read Clinical Breakdown ↓";m.style.maxHeight=o?m.scrollHeight+"px":0};w.append(e)})}
+/* ---------- drawer ---------- */
+const dSel=$("#dSel");ISS.forEach((x,i)=>dSel.add(new Option(x.p,i)));dSel.onchange=()=>{S.i=+dSel.value;calc()};
+const dayN=[...Array(5)].map((_,i)=>{const d=new Date();d.setDate(d.getDate()+i+1);d.setHours(0,0,0,0);return d});
+const TIMES=["08:00","09:30","10:30","12:00","14:30","16:00","17:30","18:30"];
+const slotsFor=()=>TIMES.filter((t,i)=>(i+S.day*2+DOCS[S.doc].off*3)%3!==0||t==="10:30"&&S.day===0&&S.doc===0);
+DOCS.forEach((d,i)=>{const b=mk("button","doc",`<span class="av">${d.i}</span><span><b>${d.n}</b><small>${d.c}</small><br><small>${d.t.join(" · ")}</small></span>`);b.onclick=()=>{S.doc=i;S.slot=null;drawPick()};$("#docs").append(b)});
+dayN.forEach((d,i)=>{const b=mk("button","chip",`<small>${d.toLocaleDateString("en-US",{weekday:"short"})}</small>${d.getDate()} ${d.toLocaleDateString("en-US",{month:"short"})}`);b.onclick=()=>{S.day=i;S.slot=null;drawPick()};$("#days").append(b)});
+function drawPick(){[...$("#docs").children].forEach((b,i)=>b.setAttribute("aria-pressed",i===S.doc));[...$("#days").children].forEach((b,i)=>b.setAttribute("aria-pressed",i===S.day));
+const sl=$("#slots");sl.innerHTML="";slotsFor().forEach(t=>{const b=mk("button","chip",t);b.setAttribute("aria-pressed",S.slot===t);b.onclick=()=>{S.slot=t;$("#eS").textContent="";drawPick()};sl.append(b)})}
+function syncDrawer(){const P=plan();dSel.value=S.i;$("#dT").textContent=P.x.p;$("#dM").textContent=`${P.n} sessions · ${P.wk} wk · ${$$$(P.out)} est. out-of-pocket`}
+let last;function open(){last=document.activeElement;document.body.classList.add("open");drawPick();syncDrawer();setTimeout(()=>$("#cl").focus(),300)}
+function close(){document.body.classList.remove("open");last&&last.focus&&last.focus()}
+$$("[data-book]").forEach(b=>b.onclick=open);$("#lock").onclick=open;$("#cl").onclick=close;$("#bk").onclick=close;
+document.addEventListener("keydown",e=>{if(e.key==="Escape")close();if(e.key==="Tab"&&document.body.classList.contains("open")){const f=$$("#dr button:not(.hid *),#dr select,#dr input").filter(x=>x.offsetParent);const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
+const V={nm:v=>v.trim().length>=2?"":"Please enter your full name.",ph:v=>v.replace(/\D/g,"").length>=10?"":"Enter a valid phone number (10+ digits).",em:v=>/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(v)?"":"Enter a valid email address."};
+const EM={nm:"#eN",ph:"#eP",em:"#eE"};
+Object.keys(V).forEach(k=>$("#"+k).addEventListener("input",()=>{const m=V[k]($("#"+k).value);$(EM[k]).textContent=m;$("#"+k).classList.toggle("bad",!!m)}));
+let ref="";
+$("#go").onclick=()=>{let ok=true;Object.keys(V).forEach(k=>{const m=V[k]($("#"+k).value);$(EM[k]).textContent=m;$("#"+k).classList.toggle("bad",!!m);if(m&&ok){$("#"+k).focus();ok=false}});
+if(!S.slot){$("#eS").textContent="Pick a time slot to continue.";if(ok)$("#slots").scrollIntoView({behavior:"smooth",block:"center"});ok=false}
+if(!ok)return;const P=plan(),d=dayN[S.day];ref="KX-"+Math.random().toString(36).slice(2,6).toUpperCase()+"-"+String(Math.floor(Math.random()*900)+100);
+$("#ref").textContent=ref;$("#dMsg").textContent=`${$("#nm").value.trim().split(" ")[0]}, ${DOCS[S.doc].n} will see you ${d.toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"})} at ${S.slot} for your ${P.x.p} (${P.n} sessions, ${$$$(P.out)} est.).`;
+$("#form").classList.add("hid");$("#done").classList.remove("hid");$("#dr").scrollTo({top:0,behavior:"smooth"})};
+$("#ics").onclick=()=>{const d=new Date(dayN[S.day]),[h,m]=S.slot.split(":");d.setHours(+h,+m);const f=x=>new Date(x.getTime()-x.getTimezoneOffset()*6e4).toISOString().replace(/[-:]|\.\d+/g,"").slice(0,15);const e=new Date(d.getTime()+36e5);
+const ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Kinetix//Booking//EN","BEGIN:VEVENT","UID:"+ref+"@kinetix.example","DTSTAMP:"+f(new Date())+"Z","DTSTART:"+f(d),"DTEND:"+f(e),"SUMMARY:Kinetix – "+plan().x.p,"LOCATION:Level 2\\, The Foundry\\, 48 Harbour Row","DESCRIPTION:Specialist: "+DOCS[S.doc].n+"\\nRef: "+ref,"END:VEVENT","END:VCALENDAR"].join("\r\n");
+const a=mk("a");a.href=URL.createObjectURL(new Blob([ics],{type:"text/calendar"}));a.download="kinetix-"+ref+".ics";document.body.append(a);a.click();a.remove()};
+$("#rst").onclick=()=>{["nm","ph","em"].forEach(k=>{$("#"+k).value="";$("#"+k).classList.remove("bad");$(EM[k]).textContent=""});S.slot=null;S.doc=0;S.day=0;$("#done").classList.add("hid");$("#form").classList.remove("hid");drawPick()};
+/* ---------- misc ---------- */
+function toCalc(){$("#estimator").scrollIntoView({behavior:"smooth"});setTimeout(()=>$("#o1 .opt").focus({preventScroll:true}),600)}
+$("#goCalc").onclick=toCalc;$("#mEst").onclick=toCalc;
+$("#xr").onclick=e=>{const o=document.body.classList.toggle("xray");e.currentTarget.setAttribute("aria-pressed",o);e.currentTarget.textContent="✦ Agency Audit X-Ray: "+(o?"ON":"OFF")};
+(function(){const t=new Date(),h=t.getHours();$("#status").textContent=(h>=7&&h<20?"Clinic Open":"Clinic Closed")+" • Next diagnostic slot: Tomorrow, 10:30 AM"})();
+drawArc(0);calc();cases();
+</script></body></html>

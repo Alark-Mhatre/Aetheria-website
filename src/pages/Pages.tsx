@@ -1,5 +1,6 @@
 import { Window } from '../components/Window'
 import { BriefBuilder } from '../components/BriefBuilder'
+import { ReferenceWebsiteCard } from '../components/ReferenceWebsiteCard'
 import { Team } from './Home'
 import { CASE_STUDIES, EMAIL, PAGES, ROUTES } from '../data'
 
@@ -16,12 +17,22 @@ function CaseStudyCard({ study }: { study: (typeof CASE_STUDIES)[number] }) {
 
 export function Portfolio() {
   return (
-    <Window file="portfolio.tsx" tone="b">
-      <h1 className="sm">Portfolio</h1>
-      <p className="lead">Selected case studies and concept critiques that turn product friction into clearer design decisions.</p>
-      <div className="grid study-grid">{CASE_STUDIES.map(study => <CaseStudyCard key={study.id} study={study} />)}</div>
-      <p className="note">Need a custom build? <a href="#contact"><b>Book a call.</b></a></p>
-    </Window>
+    <>
+      <Window file="case-studies/" tone="b">
+        <h1 className="sm">View Case Studies</h1>
+        <p className="lead">Selected case studies and concept critiques that turn product friction into clearer design decisions.</p>
+        <div className="grid study-grid">{CASE_STUDIES.map(study => <CaseStudyCard key={study.id} study={study} />)}</div>
+        <p className="note">Need a custom build? <a href="#contact"><b>Book a call.</b></a></p>
+      </Window>
+      <Window file="sample-websites/" tone="g">
+        <h2>Sample Websites</h2>
+        <p className="lead">Open either supplied sample website in its original, unchanged form.</p>
+        <div className="sample-site-grid">
+          <ReferenceWebsiteCard kind="kinetix" />
+          <ReferenceWebsiteCard kind="devon" />
+        </div>
+      </Window>
+    </>
   )
 }
 
